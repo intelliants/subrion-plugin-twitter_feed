@@ -4,9 +4,9 @@
 	<summary>Displays Twitter feed on the Front End.</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>3.3.0</version>
-	<date>2015-06-17</date>
-	<compatibility>3.3</compatibility>
+	<version>4.0.0</version>
+	<date>2016-01-08</date>
+	<compatibility>4.0</compatibility>
 
 	<configgroup name="twitter_feed">Twitter Feed</configgroup>
 
@@ -23,7 +23,7 @@
 	</phrases>
 
 	<blocks>
-		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="plugin:twitter_feed:block.twitter.tpl" classname="box-clear"><![CDATA[]]></block>
+		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="block.twitter" classname="box-clear"><![CDATA[]]></block>
 	</blocks>
 
 	<hooks>
