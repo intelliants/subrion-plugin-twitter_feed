@@ -5,7 +5,7 @@
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
 	<version>4.0.0</version>
-	<date>2016-01-08</date>
+	<date>2016-02-11</date>
 	<compatibility>4.0</compatibility>
 
 	<configgroup name="twitter_feed">Twitter Feed</configgroup>
@@ -23,7 +23,7 @@
 	</phrases>
 
 	<blocks>
-		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="block.twitter" classname="box-clear"><![CDATA[]]></block>
+		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="block.twitter"><![CDATA[]]></block>
 	</blocks>
 
 	<hooks>
