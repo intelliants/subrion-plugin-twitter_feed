@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<plugin name="twitter_feed">
+<module type="plugin" name="twitter_feed">
 	<title>Twitter Feed</title>
 	<summary>Displays Twitter feed on the Front End.</summary>
 	<author>Intelliants LLC</author>
 	<contributor>Intelliants LLC</contributor>
-	<version>4.0.0</version>
-	<date>2016-02-11</date>
-	<compatibility>4.0</compatibility>
+	<version>4.1.0</version>
+	<date>2017-04-23</date>
+	<category>social</category>
+	<compatibility>4.1</compatibility>
 
 	<configgroup name="twitter_feed">Twitter Feed</configgroup>
 
@@ -27,6 +28,6 @@
 	</blocks>
 
 	<hooks>
-		<hook name="phpCoreBeforePageDisplay" page_type="front" filename="plugins/twitter_feed/includes/hook.get.feed.php"><![CDATA[]]></hook>
+		<hook name="phpCoreBeforePageDisplay" type="php" page_type="front" filename="hook.get.feed"><![CDATA[]]></hook>
 	</hooks>
-</plugin>
+</module>
