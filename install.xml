@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <plugin name="twitter_feed">
-	<title>Twitter Feed</title>
-	<summary>Displays Twitter feed on the Front End.</summary>
-	<author>Intelliants LLC</author>
-	<contributor>Intelliants LLC</contributor>
-	<version>4.0.0</version>
-	<date>2016-02-11</date>
-	<compatibility>4.0</compatibility>
+    <title>Twitter Feed</title>
+    <summary>Displays Twitter feed on the Front End.</summary>
+    <author>Intelliants LLC</author>
+    <contributor>Intelliants LLC</contributor>
+    <version>4.1.0</version>
+    <date>2017-05-30</date>
+    <compatibility>4.1</compatibility>
 
-	<configgroup name="twitter_feed">Twitter Feed</configgroup>
+    <configgroup name="twitter_feed">Twitter Feed</configgroup>
 
-	<config group="twitter_feed" name="twitter_feed_divider" type="divider" description="Twitter Feed">Settings</config>
-	<config group="twitter_feed" name="twitter_feed_username" type="text" description="Username" length="255"><![CDATA[]]></config>
-	<config group="twitter_feed" name="twitter_feed_number_of_tweets" type="text" description="Number of tweets to display">5</config>
-	<config group="twitter_feed" name="twitter_feed_consumer_key" type="text" description="Consumer Key" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="twitter_feed_consumer_secret" type="text" description="Consumer Secret" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="oauth_access_token" type="text" description="OAuth Access Token" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="oauth_access_token_secret" type="text" description="OAuth Access Token Secret" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_divider" type="divider" description="Twitter Feed">Settings</config>
+    <config group="twitter_feed" name="twitter_feed_username" type="text" description="Username" length="255"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_number_of_tweets" type="text" description="Number of tweets to display">5</config>
+    <config group="twitter_feed" name="twitter_feed_consumer_key" type="text" description="Consumer Key" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_consumer_secret" type="text" description="Consumer Secret" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="oauth_access_token" type="text" description="OAuth Access Token" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="oauth_access_token_secret" type="text" description="OAuth Access Token Secret" length="100"><![CDATA[]]></config>
 
-	<phrases>
-		<phrase category="frontend" key="no_tweets_yet">Please, configure this plugin in Admin Panel first.</phrase>
-	</phrases>
+    <phrases>
+        <phrase category="frontend" key="no_tweets_yet">Please, configure this plugin in Admin Panel first.</phrase>
+    </phrases>
 
-	<blocks>
-		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="block.twitter"><![CDATA[]]></block>
-	</blocks>
+    <blocks>
+        <block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="1" filename="block.twitter"><![CDATA[]]></block>
+    </blocks>
 
-	<hooks>
-		<hook name="phpCoreBeforePageDisplay" page_type="front" filename="plugins/twitter_feed/includes/hook.get.feed.php"><![CDATA[]]></hook>
-	</hooks>
+    <hooks>
+        <hook name="phpCoreBeforePageDisplay" page_type="front" type="php" filename="hook.get.feed"><![CDATA[]]></hook>
+    </hooks>
 </plugin>
