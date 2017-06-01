@@ -24,9 +24,8 @@
  *
  ******************************************************************************/
 
-if (iaView::REQUEST_HTML == $iaView->getRequestType() && $iaView->blockExists('twitter_feed'))
-{
-    require_once dirname(__FILE__) . '/classes/TwitterAPIExchange.php';
+if (iaView::REQUEST_HTML == $iaView->getRequestType() && $iaView->blockExists('twitter_feed')) {
+    require_once __DIR__ . '/classes/TwitterAPIExchange.php';
 
     $iaTwitter = new TwitterAPIExchange([
         'oauth_access_token' => $iaCore->get('oauth_access_token'),
@@ -39,13 +38,10 @@ if (iaView::REQUEST_HTML == $iaView->getRequestType() && $iaView->blockExists('t
     if ($response = $iaTwitter
         ->setGetField('?screen_name=' . $iaCore->get('twitter_feed_username') . '&count=' . $iaCore->get('twitter_feed_number_of_tweets'))
         ->buildOauth('https://api.twitter.com/1.1/statuses/user_timeline.json', 'GET')
-        ->performRequest())
-    {
+        ->performRequest()) {
         $response = json_decode($response);
-        if (!isset($response->errors))
-        {
-            foreach ($response as $tweet)
-            {
+        if (!isset($response->errors)) {
+            foreach ($response as $tweet) {
                 $tweets[] = [
                     'created_at' => $tweet->created_at,
                     'name' => $tweet->user->name,

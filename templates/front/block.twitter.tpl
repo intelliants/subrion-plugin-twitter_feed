@@ -14,5 +14,5 @@
         {/foreach}
     </div>
 {else}
-    {lang key='no_tweets_yet'}
+    <p>{lang key='no_tweets_yet'}</p>
 {/if}
