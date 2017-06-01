@@ -9,23 +9,23 @@
 	<category>social</category>
 	<compatibility>4.1</compatibility>
 
-	<configgroup name="twitter_feed">Twitter Feed</configgroup>
+    <configgroup name="twitter_feed">Twitter Feed</configgroup>
 
-	<config group="twitter_feed" name="twitter_feed_divider" type="divider" description="Twitter Feed">Settings</config>
-	<config group="twitter_feed" name="twitter_feed_username" type="text" description="Username" length="255"><![CDATA[]]></config>
-	<config group="twitter_feed" name="twitter_feed_number_of_tweets" type="text" description="Number of tweets to display">5</config>
-	<config group="twitter_feed" name="twitter_feed_consumer_key" type="text" description="Consumer Key" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="twitter_feed_consumer_secret" type="text" description="Consumer Secret" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="oauth_access_token" type="text" description="OAuth Access Token" length="100"><![CDATA[]]></config>
-	<config group="twitter_feed" name="oauth_access_token_secret" type="text" description="OAuth Access Token Secret" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_divider" type="divider" description="Twitter Feed">Settings</config>
+    <config group="twitter_feed" name="twitter_feed_username" type="text" description="Username" length="255"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_number_of_tweets" type="text" description="Number of tweets to display">5</config>
+    <config group="twitter_feed" name="twitter_feed_consumer_key" type="text" description="Consumer Key" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="twitter_feed_consumer_secret" type="text" description="Consumer Secret" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="oauth_access_token" type="text" description="OAuth Access Token" length="100"><![CDATA[]]></config>
+    <config group="twitter_feed" name="oauth_access_token_secret" type="text" description="OAuth Access Token Secret" length="100"><![CDATA[]]></config>
 
-	<phrases>
-		<phrase category="frontend" key="no_tweets_yet">Please, configure this plugin in Admin Panel first.</phrase>
-	</phrases>
+    <phrases>
+        <phrase category="frontend" key="no_tweets_yet">Please, configure this plugin in Admin Panel first.</phrase>
+    </phrases>
 
-	<blocks>
-		<block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="0" pages="index" filename="block.twitter"><![CDATA[]]></block>
-	</blocks>
+    <blocks>
+        <block name="twitter_feed" title="Twitter Feed" position="left" type="smarty" sticky="1" filename="block.twitter"><![CDATA[]]></block>
+    </blocks>
 
 	<hooks>
 		<hook name="phpCoreBeforePageDisplay" type="php" page_type="front" filename="hook.get.feed"><![CDATA[]]></hook>
