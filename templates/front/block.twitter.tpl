@@ -2,7 +2,7 @@
     <div class="ia-items latest-tweets">
         {foreach $timeline as $entry}
             <div class="media ia-item ia-item-bordered-bottom">
-                <a class="pull-left" href="http://twitter.com/{$entry.screen_name}">
+                <a class="pull-left" href="{$entry.url}" target="_blank">
                     <img src="{$entry.image}" weight="50">
                 </a>
                 <div class="media-body">

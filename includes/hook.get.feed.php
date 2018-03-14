@@ -48,7 +48,7 @@ if (iaView::REQUEST_HTML == $iaView->getRequestType() && $iaView->blockExists('t
                     'image' => $tweet->user->profile_image_url,
                     'screen_name' => $tweet->user->screen_name,
                     'text' => preg_replace('#((http|https):\/\/[a-z0-9_\.\-\+\&\!\#\~\/\,]+)#i', '<a href="$1" target="_blank">$1</a>', $tweet->text),
-                    'url' => 'http://twitter.com/' . $tweet->user->screen_name
+                    'url' => 'https://twitter.com/' . $tweet->user->screen_name
                 ];
             }
         }
